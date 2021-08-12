@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "hostpools_PooledMultisession_name": {
+            "defaultValue": "PooledMultisession",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.DesktopVirtualization/hostpools",
+            "apiVersion": "2021-03-09-preview",
+            "name": "[parameters('hostpools_PooledMultisession_name')]",
+            "location": "westus2",
+            "tags": {
+                "Service": "AzureVirtulDesktop"
+            },
+            "properties": {
+                "description": "Created through the Azure Virtual Desktop extension",
+                "hostPoolType": "Pooled",
+                "customRdpProperty": "drivestoredirect:s:*;audiomode:i:0;videoplaybackmode:i:1;redirectclipboard:i:1;redirectprinters:i:1;devicestoredirect:s:*;redirectcomports:i:1;redirectsmartcards:i:1;usbdevicestoredirect:s:*;enablecredsspsupport:i:1;use multimon:i:1;",
+                "maxSessionLimit": 5,
+                "loadBalancerType": "BreadthFirst",
+                "validationEnvironment": false,
+                "preferredAppGroupType": "Desktop",
+                "startVMOnConnect": false
+            }
+        }
+    ]
+    
+}
