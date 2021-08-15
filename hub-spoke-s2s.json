@@ -26,35 +26,6 @@
     "variables": {},
     "resources": [
         {
-            "type": "Microsoft.Network/localNetworkGateways",
-            "apiVersion": "2020-11-01",
-            "name": "[parameters('localNetworkGateways_lng_gateway_name')]",
-            "location": "westus2",
-            "properties": {
-                "localNetworkAddressSpace": {
-                    "addressPrefixes": []
-                },
-                "gatewayIpAddress": "52.143.71.85"
-            }
-        },
-        {
-            "type": "Microsoft.Network/publicIPAddresses",
-            "apiVersion": "2020-11-01",
-            "name": "[parameters('publicIPAddresses_vng_gateway_pip_name')]",
-            "location": "westus2",
-            "sku": {
-                "name": "Basic",
-                "tier": "Regional"
-            },
-            "properties": {
-                "ipAddress": "52.143.71.85",
-                "publicIPAddressVersion": "IPv4",
-                "publicIPAllocationMethod": "Dynamic",
-                "idleTimeoutInMinutes": 4,
-                "ipTags": []
-            }
-        },
-        {
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-11-01",
             "name": "[parameters('virtualNetworks_vnet_hub_name')]",
@@ -305,6 +276,36 @@
                     ]
                 }
             }
+        },
+              {
+            "type": "Microsoft.Network/localNetworkGateways",
+            "apiVersion": "2020-11-01",
+            "name": "[parameters('localNetworkGateways_lng_gateway_name')]",
+            "location": "westus2",
+            "properties": {
+                "localNetworkAddressSpace": {
+                    "addressPrefixes": []
+                },
+                "gatewayIpAddress": "52.143.71.85"
+            }
+        },
+        {
+            "type": "Microsoft.Network/publicIPAddresses",
+            "apiVersion": "2020-11-01",
+            "name": "[parameters('publicIPAddresses_vng_gateway_pip_name')]",
+            "location": "westus2",
+            "sku": {
+                "name": "Basic",
+                "tier": "Regional"
+            },
+            "properties": {
+                "ipAddress": "52.143.71.85",
+                "publicIPAddressVersion": "IPv4",
+                "publicIPAllocationMethod": "Dynamic",
+                "idleTimeoutInMinutes": 4,
+                "ipTags": []
+            }
         }
+  
     ]
 }
