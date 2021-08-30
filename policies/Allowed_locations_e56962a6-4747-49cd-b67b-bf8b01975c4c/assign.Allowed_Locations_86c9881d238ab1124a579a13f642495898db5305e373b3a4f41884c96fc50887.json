@@ -1,0 +1,41 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "98da7dda-f01f-4d44-87c8-b9d4cbbf495e",
+  "tenantId": "a0392578-60b6-42a3-8d05-f766cac3ea05",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "Allowed Locations",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e56962a6-4747-49cd-b67b-bf8b01975c4c",
+  "scope": "/subscriptions/82d21ec8-4b6a-4bf0-9716-96b38d9abb43",
+  "notScopes": [],
+  "parameters": {
+   "listOfAllowedLocations": {
+    "value": [
+     "westus2",
+     "westcentralus"
+    ]
+   }
+  },
+  "description": "",
+  "metadata": {
+   "assignedBy": "John Kaufman",
+   "parameterScopes": {
+    "listOfAllowedLocations": "/subscriptions/82d21ec8-4b6a-4bf0-9716-96b38d9abb43"
+   },
+   "createdBy": "50d28ca2-6fb9-4106-a469-4109b3c6ccd8",
+   "createdOn": "2020-06-04T16:46:39.9465263Z",
+   "updatedBy": "a6ea8efb-9d52-4bfc-a938-58412bbcf61d",
+   "updatedOn": "2021-08-30T19:02:39.5490091Z"
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/82d21ec8-4b6a-4bf0-9716-96b38d9abb43/providers/Microsoft.Authorization/policyAssignments/86c9881d238ab1124a579a13f642495898db5305e373b3a4f41884c96fc50887",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "86c9881d238ab1124a579a13f642495898db5305e373b3a4f41884c96fc50887",
+ "location": "westus2"
+}
