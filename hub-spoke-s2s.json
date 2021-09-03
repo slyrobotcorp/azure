@@ -277,7 +277,7 @@
                 }
             }
         },
-              {
+        {
             "type": "Microsoft.Network/localNetworkGateways",
             "apiVersion": "2020-11-01",
             "name": "[parameters('localNetworkGateways_lng_gateway_name')]",
@@ -306,6 +306,5 @@
                 "ipTags": []
             }
         }
-  
     ]
 }
